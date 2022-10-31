@@ -12,28 +12,28 @@ const Login = () => {
         <Col md={6} className="login-form-container">
           <Form style={{ width: "100%" }}>
             <h1>Login to your Account</h1>
-            <Form.Group>
+            <Form.Group className="mb-3">
               <Form.Label>Email Addresss</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter Email"
                 value={email}
                 required
-                onChange={(e)=>setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Group>
 
-            <Form.Group>
+            <Form.Group className="mb-3">
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Enter Password"
                 value={password}
                 required
-                onChange={(e)=>setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-            <Form.Group>
+            <Form.Group className="mb-3">
               <Button type="submit">Login</Button>
             </Form.Group>
             <p>
@@ -41,7 +41,11 @@ const Login = () => {
             </p>
           </Form>
         </Col>
-        <Col md={6} className="login-image-container"></Col>
+        <Col
+          md={6}
+          className="login-image-container"
+          style={{ backgroundImage: 'url(images/login.jpg)' }}
+        ></Col>
       </Row>
     </Container>
   );
